@@ -17,6 +17,5 @@ function getRelatedEmployees(managerId) {
 
   return arrayWithNames;
 }
-getRelatedEmployees();
 
 module.exports = { isManager, getRelatedEmployees };
