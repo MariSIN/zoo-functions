@@ -11,7 +11,7 @@ describe('Testes da função HandlerElephants', () => {
     const expected = ['Ilana', 'Orval', 'Bea', 'Jefferson'];
     expect(actual).toStrictEqual(expected);
   });
-  it('recebendo o argumento "averageAge" retorna a média de idade dos elefantes', () => {
+  it('Recebendo o argumento "averageAge" retorna a média de idade dos elefantes', () => {
     const actual = handlerElephants('averageAge');
     const expected = 10.5;
     expect(actual).toStrictEqual(expected);
