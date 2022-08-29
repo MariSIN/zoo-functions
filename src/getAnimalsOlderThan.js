@@ -9,5 +9,5 @@ const getAnimalsOlderThan = (animal, age) => {
 
   return ageAndAnimals;
 };
-getAnimalsOlderThan();
+
 module.exports = getAnimalsOlderThan;
