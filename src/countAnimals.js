@@ -9,14 +9,14 @@ function countAnimals(animal) {
     return sum;
   }
   if (animal.specie && animal.sex) {
-    const ani = species.find((name) => species.name === name.specie).residents;
+    const ani = species.find((name) => name.name === animal.specie).residents;
     const sex = ani.filter((sexo) => sexo.sex === animal.sex).length;
     return sex;
   }
   if (animal.specie) {
-    const quant = species.find((count) => species.name === count.specie).residents.length;
+    const quant = species.find((count) => count.name === animal.specie).residents.length;
     return quant;
   }
 }
-countAnimals();
+
 module.exports = countAnimals;
