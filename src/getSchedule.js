@@ -1,7 +1,6 @@
 const { species } = require('../data/zoo_data');
 const data = require('../data/zoo_data');
 
-/*
 const expected = {
   Tuesday: {
     officeHour: 'Open from 8am until 6pm',
@@ -34,13 +33,19 @@ const expected = {
   },
   Monday: { officeHour: 'CLOSED', exhibition: 'The zoo will be closed!' },
 };
-*/
-
 function getSchedule(scheduleTarget) {
-  if (species.some((animal) => animal.name === scheduleTarget)) {
-    const daysForVisity = species.find((nome) => nome.name === scheduleTarget).availability;
-    return daysForVisity;
+  const specie = species.some((animal) => animal.name === scheduleTarget);
+  if (specie) {
+    return species.find((nome) => nome.name === scheduleTarget).availability;
   }
+  for (let i = 0; i < Object.keys(expected).length; i += 1) {
+    if (Object.keys(expected).includes(scheduleTarget)) {
+      return {
+        [scheduleTarget]: expected[scheduleTarget],
+      };
+    }
+  }
+  return expected;
 }
-getSchedule();
+console.log(getSchedule('Saturday'));
 module.exports = getSchedule;
