@@ -47,5 +47,4 @@ function getSchedule(scheduleTarget) {
   }
   return expected;
 }
-console.log(getSchedule('Saturday'));
 module.exports = getSchedule;
