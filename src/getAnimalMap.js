@@ -88,12 +88,17 @@ const recebeSexSorted = (sex) => {
   return aniSex;
 };
 
-function getAnimalMap({ includeNames, sorted, sex } = {}) {
-  if (!includeNames) return local;
+const conditions = (options) => {
+  const { sex, sorted } = options;
   if (sex && sorted) return recebeSexSorted(sex);
   if (sex) return recebeSex(sex);
   if (sorted) return newObjSorted;
-  if (includeNames) return newObj;
+  return newObj;
+};
+
+function getAnimalMap(options = local) {
+  if (!options.includeNames) return local;
+  return conditions(options);
 }
 console.log(getAnimalMap({ includeNames: true, sex: 'female', sorted: true }).NE);
 module.exports = getAnimalMap;
