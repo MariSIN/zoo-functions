@@ -73,6 +73,7 @@
   <summary>
     Implemente os testes da função <code>handlerElephants</code> para obter ao menos 80% de cobertura
   </summary> <br />
+</details>
 ---
 
 ## 7. Obtenha ao menos 90% de cobertura de testes na função `handlerElephants`.
