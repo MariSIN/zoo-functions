@@ -15,8 +15,6 @@
 
 # Requisitos Obrigatórios
 
-⚠️ **PULL REQUESTS COM ISSUES NO LINTER NÃO SERÃO AVALIADAS. ATENTE-SE PARA RESOLVÊ-LAS ANTES DE FINALIZAR O DESENVOLVIMENTO!** ⚠️
-
 ## 1. Implemente a função `getSpeciesByIds`.
 
 <details>
